@@ -1,0 +1,107 @@
+:root{
+    --section-bg: whitesmoke;
+    --section-box-shadow: 0px 0px 7px 0px black;
+    --my-font1: Verdana, Geneva, Tahoma, sans-serif;
+    --headings-font-size: 1em;
+    --border-radius: .4em;
+    --icons-color: rgb(6, 3, 43);
+    --icons-size: 1em;
+    --grid-data-height: 25vh;
+    --grid-data-width: 31vw;
+}
+
+body{
+    font-family: var(--my-font1);
+}
+
+.container{
+    width: 80vw;
+    height: auto;
+    justify-self: center;
+    box-shadow: var(--section-box-shadow);
+    border-radius: var(--border-radius);
+}
+
+header{
+    background: linear-gradient(134deg, navy, rgb(156, 156, 220) 70%, navy 80%);
+    color: white;
+    padding: 0.3em 0.3em 1.9em 2.5em;
+    line-height: .5em;
+    margin: 0%;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+.theme-btn{
+    float: right;
+    font-size: 1.7em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+main{
+    padding: 2em;
+}
+
+.section-grid-box{
+    display: grid;
+    grid-template-columns: 5em 5em;
+    grid-template-rows: 12em 12em;
+    grid-row-gap: 1em;
+    grid-column-gap: 12em;
+    padding: 0em 1em;
+}
+
+.section-grid-data{
+    width: var(--grid-data-width);
+    height: var(--grid-data-height);
+}
+
+.email-icon{
+    font-size: var(--icons-size);
+    color: var(--icons-color)
+}
+.fa-github{
+    font-size: var(--icons-size);
+    color: var(--icons-color);
+}
+img{
+    height: 25vh;
+    width: 22vw;
+    border-radius: 100%;
+}
+.skills ul{
+    padding-left: 10%;
+}
+
+/* DARK THEME */
+body.dark-theme{
+    background: black;
+    color: white;
+}
+body.dark-theme .container{
+    background: #1a1a1a;
+    box-shadow: 0em 0em 1em 0em white;
+}
+body.dark-theme header{
+    background: linear-gradient(134deg, #0d0d0d, #c71717 80%, #0d0d0d 90%);
+}
+
+
+@media screen and (max-width: 600px){
+    .container{
+        width: 91vw;
+    }
+    .section-grid-box{
+        grid-template-columns: 5em 5em;
+        grid-template-rows: 12em 12em;
+        grid-row-gap: 3em;
+        grid-column-gap: 8.5em;
+        padding: 0em 1em;
+    }
+    img{
+        height: 16vh;
+        width: 29vw;
+    }
+    
+}
