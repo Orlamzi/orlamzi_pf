@@ -27,4 +27,20 @@ themeBtn.addEventListener('click', (e) => {
         themeBtn.textContent = '🌚';
         localStorage.setItem('theme', 'light');
     }
-})
+});
+
+// TABS SECTION////////////////////////////////////////
+const tabs = document.querySelectorAll('.tabs');
+const tabsContainer = document.querySelector('.tab_container');
+const tabsContent = document.querySelectorAll('.tabs_content');
+
+tabsContainer.addEventListener('click', function(e) {
+    const clicked = e.target.closest('.tabs');
+    tabs.forEach(tab => tab.classList.remove('tab-active'));
+    if (!clicked) return;
+    clicked.classList.add('tab-active');
+
+    tabsContent.forEach(content => content.classList.remove('tabs_content-active'));
+    document.querySelector(`.tabs_content-${clicked.dataset.tab}`).classList.add('tabs_content-active');
+});
+
