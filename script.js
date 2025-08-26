@@ -7,7 +7,6 @@ const randomColor = () =>
 const header = document.querySelector('header');
 header.addEventListener('mouseenter', (e) => {
         header.style.background = randomColor();
-        console.log('mouse entered, new color: ', header.style.background);
 });
 
 const body = document.body;
